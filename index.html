@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Community Event Registration</h1>
+            <p>Join us for an amazing community event!</p>
+        </header>
+
+        <form id="registrationForm" class="registration-form">
+            <!-- Basic Info Section: Name, Email, Phone, Age (vertically stacked) -->
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                    <span class="error-message" id="fullNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="1234567890">
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age">
+                    <span class="error-message" id="ageError"></span>
+                </div>
+            </div>
+
+            <!-- Password Section: Password and Confirm Password (side by side) -->
+            <div class="password-section">
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+            </div>
+
+            <!-- Final Section: Event Preference and Terms (vertically stacked) -->
+            <div class="final-section">
+                <div class="form-group">
+                    <label for="eventType">Event Preference *</label>
+                    <select id="eventType" name="eventType">
+                        <option value="">Select an event type</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="seminar">Seminar</option>
+                        <option value="conference">Conference</option>
+                    </select>
+                    <span class="error-message" id="eventTypeError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I agree to the terms and conditions *</label>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Register Now</button>
+            
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p>Registration successful! Thank you for signing up.</p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
